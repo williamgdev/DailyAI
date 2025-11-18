@@ -1,11 +1,21 @@
 .github/instructions/wmt-copilot.instructions.md
-# Ignore volatile UI-related state
-.obsidian/workspace.json
-.obsidian/app.json
 
-# Ignore system and editor files (more specific to what I do)
+# Personal data (each user's local workspace)
+personal/
+
+# Local configuration (lives under personal/config/; repo has no team config)
+*.local.*
+local.config.json
+config/config-team.json
+
+# Volatile UI-related state
+.obsidian/
+
+# System and editor files
 .vscode/
 .idea/
-
 .DS_Store
 Thumbs.db
+.claude/skills/obsidian-workflow
+.codex/skills/obsidian-workflow
+.cursor/skills/obsidian-workflow
