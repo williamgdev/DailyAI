@@ -1,6 +1,6 @@
 ---
-name: obsidian-workflow
-description: AI-driven Obsidian workflow system for daily notes, task management, and project organization. Automates "Start my day" and "Digest my day" workflows with optional calendar integration, task rollover, and project categorization. Works with Claude and other AI assistants.
+name: dailyai
+description: DailyAI - AI-driven Obsidian workflow system for daily notes, task management, and project organization. Automates "Start my day" and "Digest my day" workflows with optional calendar integration, task rollover, and project categorization. Works with Claude and other AI assistants.
 allowed-tools:
   - Read
   - Write
@@ -24,17 +24,17 @@ arguments:
   - [project-name] - optional, for create-project and work-on-project commands
 ---
 
-# Obsidian Workflow Skill
+# DailyAI Skill
 
 ## Overview
 
-This skill implements an AI-driven operating system for Obsidian that automates daily workflows, task management, and project organization. It follows an agentic architecture with AGENT.md files for context-aware instructions.
+DailyAI is an AI-driven operating system for Obsidian that automates daily workflows, task management, and project organization. It follows an agentic architecture with AGENT.md files for context-aware instructions.
 
 ## What This Skill Does
 
 ### 1. Start My Day 🌅
 
-**Trigger**: `claude obsidian-workflow start` or just say "start my day"
+**Trigger**: `claude dailyai start` or just say "start my day"
 
 **Actions**:
 1. Creates today's daily note using template
@@ -58,7 +58,7 @@ This skill implements an AI-driven operating system for Obsidian that automates 
 
 ### 2. Digest My Day 🌙
 
-**Trigger**: `claude obsidian-workflow digest` or just say "digest my day"
+**Trigger**: `claude dailyai digest` or just say "digest my day"
 
 **Actions**:
 1. Finds the most recent daily note
@@ -76,7 +76,7 @@ This skill implements an AI-driven operating system for Obsidian that automates 
 
 ### 3. Create Project 📁
 
-**Trigger**: `claude obsidian-workflow create-project [Name]`
+**Trigger**: `claude dailyai create-project [Name]`
 
 **Actions**:
 1. Creates project folder structure:
@@ -92,7 +92,7 @@ This skill implements an AI-driven operating system for Obsidian that automates 
 
 ### 4. Update System 🔄
 
-**Trigger**: `claude obsidian-workflow update-system`
+**Trigger**: `claude dailyai update-system`
 
 **Actions**:
 1. Reads source of truth: `obsidian-templates/system_agent_template.md`

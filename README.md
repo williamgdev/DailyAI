@@ -1,8 +1,8 @@
-# Obsidian Workflow - AI Agent Skill
+# DailyAI - AI Agent Skill
 
 [![Agent Skills](https://img.shields.io/badge/Agent-Skills-blue)](https://github.com/agentskills/agentskills)
 
-AI-driven Obsidian workflow system for daily notes, task management, and project organization. Built using the [Agent Skills](https://github.com/agentskills/agentskills) format - a standardized way to define AI assistant capabilities.
+DailyAI is an AI-driven Obsidian workflow system for daily notes, task management, and project organization. Built using the [Agent Skills](https://github.com/agentskills/agentskills) format - a standardized way to define AI assistant capabilities.
 
 ## Overview
 
@@ -60,8 +60,8 @@ Project-specific AI instructions that guide how AI assistants work with each pro
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/obsidian-workflow-skill.git
-cd obsidian-workflow-skill
+git clone https://github.com/YOUR_USERNAME/dailyai.git
+cd dailyai
 ```
 
 2. Set up your Obsidian vault structure:
@@ -125,7 +125,7 @@ This skill follows the [Agent Skills](https://github.com/agentskills/agentskills
 ## Structure
 
 ```
-obsidian-workflow-skill/
+dailyai/
 ├── README.md                   # This file
 ├── SKILL.md                    # Main skill definition for AI assistants
 ├── QUICK_REFERENCE.md          # Quick reference guide

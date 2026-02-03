@@ -1,4 +1,4 @@
-# Obsidian Workflow Skill - Quick Reference
+# DailyAI - Quick Reference
 
 **Agent Skills Format** - All workflows executed by AI reading SKILL.md
 
