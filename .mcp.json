@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "dailyai-calendar": {
+      "command": "python3",
+      "args": ["./calendar/google_calendar.py"],
+      "env": {
+        "GOOGLE_CALENDAR_CREDENTIALS": "${GOOGLE_CALENDAR_CREDENTIALS}"
+      }
+    },
+    "dailyai-ical": {
+      "command": "python3",
+      "args": ["./calendar/ical_caldav.py"],
+      "env": {
+        "ICAL_CALENDAR_URL": "${ICAL_CALENDAR_URL}"
+      }
+    }
+  }
+}

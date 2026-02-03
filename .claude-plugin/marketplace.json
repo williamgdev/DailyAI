@@ -1,0 +1,17 @@
+{
+  "name": "DailyAI Personal Marketplace",
+  "owner": "Luc M.",
+  "description": "Personal marketplace for DailyAI - AI-driven Obsidian workflow automation",
+  "repository": "https://github.com/YOUR_USERNAME/DailyAI",
+  "plugins": [
+    {
+      "name": "dailyai",
+      "displayName": "DailyAI",
+      "description": "AI-driven Obsidian workflow system with calendar integration",
+      "source": "https://github.com/YOUR_USERNAME/DailyAI",
+      "version": "2.0.0",
+      "author": "Luc M.",
+      "tags": ["obsidian", "productivity", "task-management", "calendar", "workflow"]
+    }
+  ]
+}

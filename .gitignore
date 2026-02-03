@@ -25,6 +25,14 @@ yarn-error.log*
 .env.local
 .env.*.local
 
+# Credentials and tokens (Calendar integration)
+credentials.json
+credentials/
+tokens/
+.config/dailyai/
+*.token
+*.credentials
+
 # Temporary files
 *.tmp
 *.temp

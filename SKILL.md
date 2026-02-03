@@ -1,4 +1,14 @@
+⚠️ **LEGACY FORMAT** - This is the Agent Skills format (v1.0).
+
+**For Claude Code users:** Use the plugin format instead!
+- Installation: See [docs/installation.md](docs/installation.md)
+- Commands: `/start-day`, `/digest-day`, `/create-project`, `/work-on-project`
+- Guide: [docs/commands.md](docs/commands.md)
+
+This file is maintained for backward compatibility. It still works if you share it with Claude, but the Claude Code plugin is the recommended approach.
+
 ---
+
 name: dailyai
 description: DailyAI - AI-driven Obsidian workflow system for daily notes, task management, and project organization. Automates "Start my day" and "Digest my day" workflows with optional calendar integration, task rollover, and project categorization. Works with Claude and other AI assistants.
 allowed-tools:

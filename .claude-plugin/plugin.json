@@ -1,0 +1,24 @@
+{
+  "name": "dailyai",
+  "displayName": "DailyAI",
+  "version": "2.0.0",
+  "description": "AI-driven Obsidian workflow system for daily notes, task management, and project organization with calendar integration",
+  "author": "Luc M.",
+  "repository": "https://github.com/YOUR_USERNAME/DailyAI",
+  "license": "MIT",
+  "environment": {
+    "required": ["VAULT_PATH"],
+    "optional": ["GOOGLE_CALENDAR_CREDENTIALS", "ICAL_CALENDAR_URL"]
+  },
+  "dependencies": {
+    "python": ">=3.8",
+    "packages": ["google-api-python-client", "google-auth-httplib2", "icalendar", "caldav"]
+  },
+  "commands": [
+    "./commands/start-day.md",
+    "./commands/digest-day.md",
+    "./commands/create-project.md",
+    "./commands/work-on-project.md"
+  ],
+  "mcp": "./.mcp.json"
+}

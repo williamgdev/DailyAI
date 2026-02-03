@@ -4,9 +4,37 @@
 
 DailyAI is an AI-driven Obsidian workflow system for daily notes, task management, and project organization. Built using the [Agent Skills](https://github.com/agentskills/agentskills) format - a standardized way to define AI assistant capabilities.
 
+## Installation (Claude Code Plugin)
+
+DailyAI is now a Claude Code plugin! Quick setup:
+
+```bash
+# 1. Set your vault path (permanent)
+echo 'export VAULT_PATH="/path/to/your/obsidian/vault"' >> ~/.zshrc
+source ~/.zshrc
+
+# 2. Add DailyAI marketplace (in Claude Code)
+/plugin marketplace add https://github.com/YOUR_USERNAME/DailyAI
+
+# 3. Install plugin (in Claude Code)
+/plugin install dailyai
+
+# 4. Run setup
+~/.claude/plugins/dailyai/scripts/install.sh
+
+# 5. Start using
+/start-day
+```
+
+**Full setup guide:** [Installation Guide](docs/installation.md)
+
 ## Overview
 
-This is an **Agent Skill** - a standardized format for AI assistant capabilities. The entire workflow is defined in `SKILL.md` using markdown instructions that AI assistants (like Claude) can read and execute directly. No scripts required!
+This is a **Claude Code Plugin** - a packaged AI workflow system for Obsidian. Use slash commands (`/start-day`, `/digest-day`, etc.) directly in Claude Code.
+
+**Also available as:**
+- Agent Skills format in `SKILL.md` (legacy, still works)
+- Marketplace for easy installation
 
 **What it provides:**
 - 🌅 **Start My Day**: Creates daily notes with task rollover and project scanning
@@ -49,6 +77,15 @@ This is an **Agent Skill** - a standardized format for AI assistant capabilities
 - Highlights blockers and risks
 - Activates project-specific AI workflows
 
+### 📅 Calendar Integration (NEW!)
+- Supports Google Calendar (OAuth)
+- Supports iCal/CalDAV (Apple Calendar, Nextcloud, etc.)
+- Automatic event fetching for daily notes
+- Project tag extraction from event titles
+- Optional - works perfectly without calendar
+
+**Setup:** [Calendar Setup Guide](docs/calendar-setup.md)
+
 ### 🤖 AGENT.md Files
 Project-specific AI instructions that guide how AI assistants work with each project:
 - `System/AGENT.md` - System-wide workflows
@@ -75,27 +112,27 @@ export VAULT_PATH="/path/to/your/obsidian/vault"
 cp -r templates/* "$VAULT_PATH/"
 ```
 
-### Usage with Claude
+### Usage with Claude Code
 
-**Method 1: Natural Language** (if skill is loaded)
+**Claude Code Plugin (Recommended):**
 
-Simply describe what you want to do:
+Use slash commands directly in Claude Code:
+
+```bash
+/start-day                      # Create today's daily note
+/digest-day                     # File tasks to projects
+/create-project "Mobile App"    # Create new project
+/work-on-project "Mobile App"   # Load project context
 ```
-"start my day"
-"digest my day"
-"create project Mobile App"
-"work on Mobile App"
-"show me today's tasks"
-```
 
-**Method 2: Load the Skill**
+**Legacy: Agent Skills Format**
 
-Share the `SKILL.md` file with your AI assistant:
-1. Upload `SKILL.md` to your conversation, or
-2. Copy/paste the contents into chat
-3. The AI will understand all the workflows and execute them
+Still available for those using the Agent Skills format:
+1. Share `SKILL.md` with your AI assistant
+2. The AI will understand all workflows
+3. Uses standard AI tools (Read, Write, Edit, Bash, etc.)
 
-**That's it!** No scripts to run - the AI reads the markdown instructions and uses its tools (Read, Write, Edit, Bash, etc.) to execute the workflows.
+**Note:** Claude Code plugin is recommended for better integration and user experience.
 
 ## Agent Skills Format
 
