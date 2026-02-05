@@ -1,5 +1,9 @@
 # DailyAI: Team Productivity System
 
+<p align="center">
+  <img src="./docs/images/daily-ai.jpeg" alt="DailyAI - The Bridge Between Personal Privacy & Team Productivity" width="800">
+</p>
+
 AI-powered productivity system for team collaboration using [Agent Skills](https://agentskills.io/specification).
 
 ## 🚀 Quick Start
