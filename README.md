@@ -6,8 +6,8 @@ AI-powered productivity system for team collaboration using [Agent Skills](https
 
 ```bash
 # 1. Clone the repository
-git clone <your-repo-url>
-cd <repo-directory>
+git clone https://github.com/AndroidStorm/DailyAI.git
+cd DailyAI
 
 # 2. Run setup (creates your personal workspace and links skills for Cursor, Claude, Codex, VS Code, etc.)
 ./scripts/setup.sh
