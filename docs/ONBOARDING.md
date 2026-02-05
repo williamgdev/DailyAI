@@ -19,7 +19,7 @@ This repo has two distinct areas:
 
 | Area | Purpose | In version control? |
 |------|---------|---------------------|
-| **`Projects/`** | **Team projects and agents** — work the team is collaborating on (e.g. PR Reviews, Code Puppy Calendar). Each project has an `AGENT.md` and is shared with the team. | ✅ **Yes** — committed and pushed |
+| **`Projects/`** | **Team projects and agents** — work the team is collaborating on (e.g. PR Reviews, Calendar Integration). Each project has an `AGENT.md` and is shared with the team. | ✅ **Yes** — committed and pushed |
 | **`personal/`** | **Your private workspace** — daily notes, your inbox (ThingsToDo), learning (ThingsToLearn), and projects you create with “create project”. Used by “start my day” and “digest my day”. | ❌ **No** — **never pushed to the repository** (gitignored) |
 
 - **Projects/** = shared team agents and projects. Everything here is committed and visible to the team.
