@@ -1,4 +1,4 @@
-# Team Productivity System
+# DailyAI: Team Productivity System
 
 AI-powered productivity system for team collaboration using [Agent Skills](https://agentskills.io/specification).
 
