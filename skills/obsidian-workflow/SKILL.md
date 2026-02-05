@@ -18,7 +18,7 @@ sample-prompts:
   - "create project [Name]"
   - "work on a project"
   - "set up skill clients"
-  - "link skills for Cursor and Wibey"
+  - "link skills for Cursor and Claude"
 arguments:
   - [workflow-command] - required: "start", "digest", "create-project", "update-system", "setup-skill-clients"
   - [project-name] - optional, for create-project command
@@ -34,7 +34,7 @@ This skill implements an AI-driven operating system for Obsidian that automates 
 
 ### 1. Start My Day 🌅
 
-**Trigger**: `wibey obsidian-workflow start` or just say "start my day"
+**Trigger**: Say "start my day" to your AI CLI
 
 **Actions**:
 1. Creates today's daily note using template
@@ -55,7 +55,7 @@ This skill implements an AI-driven operating system for Obsidian that automates 
 
 ### 2. Digest My Day 🌙
 
-**Trigger**: `wibey obsidian-workflow digest` or just say "digest my day"
+**Trigger**: Say "digest my day" to your AI CLI
 
 **Actions**:
 1. Finds the most recent daily note
@@ -73,7 +73,7 @@ This skill implements an AI-driven operating system for Obsidian that automates 
 
 ### 3. Create Project 📁
 
-**Trigger**: `wibey obsidian-workflow create-project [Name]`
+**Trigger**: Say "create project [Name]" to your AI CLI
 
 **Actions**:
 1. Creates project folder structure:
@@ -381,7 +381,7 @@ This system uses `AGENT.md` files (singular, not AGENTS.md) for project-specific
 
 ```
 User: start my day
-Wibey: *Creates daily note for 2026-01-26*
+AI: *Creates daily note for 2026-01-26*
        *Populates recurring tasks from cadences*
        *Scans all project folders*
 
@@ -397,7 +397,7 @@ Wibey: *Creates daily note for 2026-01-26*
 
 ```
 User: digest my day
-Wibey: *Finds latest daily note (2026-01-26)*
+AI: *Finds latest daily note (2026-01-26)*
        *Checks if already digested*
        *Extracts tagged tasks*
        *Files content to projects*
@@ -421,7 +421,7 @@ Wibey: *Finds latest daily note (2026-01-26)*
 
 ```
 User: create project Mobile App Redesign
-Wibey: *Creates project folder structure*
+AI: *Creates project folder structure*
        *Registers in catalog with tag #mobile-app-redesign*
        *Sets up AGENT.md with instructions*
 

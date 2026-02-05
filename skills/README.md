@@ -7,9 +7,9 @@ This folder contains shareable Agent Skills for the team. Skills are discovered 
 After cloning the repo and running setup:
 
 ```bash
-# Use any skill
-wibey "start my day"              # Uses obsidian-workflow skill
-wibey "work on a project"         # Interactive project selection
+# Use any skill with your AI CLI (Claude Code, Cursor, OpenAI CLI, etc.)
+"start my day"              # Uses obsidian-workflow skill
+"work on a project"         # Interactive project selection
 ```
 
 ## 📂 Available Skills

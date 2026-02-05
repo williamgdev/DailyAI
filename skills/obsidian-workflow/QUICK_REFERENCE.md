@@ -2,7 +2,7 @@
 
 ## 🎯 Commands
 
-| Say to Wibey            | What It Does                          |
+| Say to Your AI CLI      | What It Does                          |
 | ----------------------- | ------------------------------------- |
 | `start my day`          | Creates daily note + tasks            |
 | `digest my day`         | Files tasks to projects + creates log |
@@ -51,7 +51,7 @@
 ### Morning
 ```
 1. Say "start my day"
-2. Wibey creates daily note
+2. AI creates daily note
 3. Tasks populated from projects
 4. Note ready for action
 ```
@@ -67,7 +67,7 @@
 ### Evening
 ```
 1. Say "digest my day"
-2. Wibey extracts tagged content
+2. AI extracts tagged content
 3. Files to project folders
 4. Creates digest log
 5. Daily note preserved

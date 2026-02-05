@@ -1,20 +1,20 @@
-# Obsidian Workflow - Wibey Skill
+# Obsidian Workflow Skill
 
-AI-driven workflow automation for Obsidian using Wibey CLI.
+AI-driven workflow automation for Obsidian using any AI CLI (Claude Code, Cursor, OpenAI CLI, Gemini CLI, etc.).
 
 ## 🚀 Quick Start
 
-After installation, use natural language with Wibey:
+After installation, use natural language with your AI CLI:
 
 ```bash
 # Morning workflow
-wibey -p "start my day"
+"start my day"
 
 # Evening workflow
-wibey -p "digest my day"
+"digest my day"
 
 # Project management
-wibey -p "create project Mobile App Redesign"
+"create project Mobile App Redesign"
 ```
 
 ## 📋 Available Commands
@@ -23,15 +23,15 @@ wibey -p "create project Mobile App Redesign"
 
 ```bash
 # Start day
-wibey -p "start my day"
-wibey -p "good morning, let's get started"
+"start my day"
+"good morning, let's get started"
 
 # Digest day
-wibey -p "digest my day"
-wibey -p "end of day, file everything"
+"digest my day"
+"end of day, file everything"
 
 # Quick checks
-wibey -p "show me today's tasks"
+"show me today's tasks"
 ```
 
 ### Direct Scripts (from repo root)
@@ -129,7 +129,7 @@ ls -la ~/vault/*/tasks.md
 
 ### Morning (9:00 AM)
 ```bash
-wibey -p "start my day"
+"start my day"
 ```
 
 Creates daily note with:
@@ -144,7 +144,7 @@ Creates daily note with:
 
 ### Evening (5:00 PM)
 ```bash
-wibey -p "digest my day"
+"digest my day"
 ```
 
 Automatically:
@@ -164,7 +164,7 @@ Automatically:
 ## 🔗 Dependencies
 
 ### Required
-- Wibey CLI installed and configured
+- An AI CLI (Claude Code, Cursor, OpenAI CLI, Gemini CLI, etc.)
 - Obsidian vault with proper structure
 
 ---

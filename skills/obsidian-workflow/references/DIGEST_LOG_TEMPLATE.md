@@ -94,6 +94,6 @@
 
 **Note**: The original daily note `{{date}}.md` remains unchanged and serves as your permanent record. This digest log confirms that all tasks have been properly filed to their respective project folders.
 
-**Digested by**: Wibey 🌀
+**Digested by**: AI Assistant 🌀
 **Completion Time**: ~X seconds
 **Status**: Success ✅
