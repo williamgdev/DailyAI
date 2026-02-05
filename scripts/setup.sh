@@ -74,7 +74,7 @@ echo "  └── Daily/$(date +%Y)/"
 echo ""
 
 # Interactive skill and client linking: choose which skills and which clients
-echo "🔗 Linking skills to clients (Cursor, Claude, Codex, VS Code)..."
+echo "🔗 Linking skills to clients (Cursor, Claude, Codex, VS Code, openCode)..."
 SKILL_CLIENTS_SCRIPT="$REPO_DIR/scripts/setup-skill-clients.sh"
 if [ -x "$SKILL_CLIENTS_SCRIPT" ]; then
   AVAILABLE_SKILLS=()
@@ -84,8 +84,8 @@ if [ -x "$SKILL_CLIENTS_SCRIPT" ]; then
     [ -f "${dir}SKILL.md" ] || continue
     AVAILABLE_SKILLS+=("$name")
   done
-  CLIENT_NAMES=(cursor claude codex vscode)
-  CLIENT_LABELS=("Cursor" "Claude" "Codex" "VS Code")
+  CLIENT_NAMES=(cursor claude codex vscode opencode)
+  CLIENT_LABELS=("Cursor" "Claude" "Codex" "VS Code" "openCode")
   if [ ${#AVAILABLE_SKILLS[@]} -eq 0 ]; then
     echo "  No skills found under skills/ (expected skills/<name>/SKILL.md)."
   else

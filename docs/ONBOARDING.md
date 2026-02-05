@@ -70,7 +70,7 @@ The script will create:
 - `personal/Daily/2026/` (daily notes)
 - `personal/catalog-project.md` (your **personal** project registry only; team projects are in `Projects/catalog-team.md`)
 
-To link skills for Cursor, Claude, Codex, or VS Code, run: `./scripts/setup-skill-clients.sh` (or say "set up skill clients" when using the obsidian-workflow skill). Re-run after adding a new skill under `skills/`.
+To link skills for Cursor, Claude, Codex, VS Code, or openCode, run: `./scripts/setup-skill-clients.sh` (or say "set up skill clients" when using the obsidian-workflow skill). Re-run after adding a new skill under `skills/`.
 
 ### Step 3: Start Using
 

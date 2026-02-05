@@ -52,7 +52,7 @@ This repository provides **Agent Skills** in the `skills/` directory (per [agent
 - **When to use:** User asks about "start my day", "digest my day", "create project", "work on a project", daily notes, task filing, or Obsidian workflow.
 - **Action:** Read the full `skills/obsidian-workflow/SKILL.md` and follow its instructions.
 
-**Note for Cursor / Claude Code / AI CLI users:** Cursor discovers skills from `.cursor/skills/` (project) or `~/.cursor/skills/` (user). Other clients (e.g. Claude Code, VS Code, OpenAI CLI, Gemini CLI) use their own skill paths; setup links into `.claude/skills/`, `.codex/skills/`, `.vscode/skills/`, etc. Run `./scripts/setup-skill-clients.sh` to link skills into `.cursor/skills/`, `.claude/skills/`, `.codex/skills/`, `.vscode/skills/` (or say "set up skill clients" when using the obsidian-workflow skill).
+**Note for Cursor / Claude Code / AI CLI users:** Cursor discovers skills from `.cursor/skills/` (project) or `~/.cursor/skills/` (user). Other clients (e.g. Claude Code, VS Code, OpenAI CLI, Gemini CLI, openCode) use their own skill paths; setup links into `.claude/skills/`, `.codex/skills/`, `.vscode/skills/`, `.opencode/skills/`, etc. Run `./scripts/setup-skill-clients.sh` to link skills into `.cursor/skills/`, `.claude/skills/`, `.codex/skills/`, `.vscode/skills/`, `.opencode/skills/` (or say "set up skill clients" when using the obsidian-workflow skill).
 
 ## Future Considerations
 

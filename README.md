@@ -13,7 +13,7 @@ AI-powered productivity system for team collaboration using [Agent Skills](https
 git clone https://github.com/AndroidStorm/DailyAI.git
 cd DailyAI
 
-# 2. Run setup (creates your personal workspace and links skills for Cursor, Claude, Codex, VS Code, etc.)
+# 2. Run setup (creates your personal workspace and links skills for Cursor, Claude, Codex, VS Code, openCode, etc.)
 ./scripts/setup.sh
 
 # 3. Start using (with your AI CLI or Cursor)
@@ -109,7 +109,7 @@ Test the setup process (simulates a fresh coworker machine):
 - (Optional) Obsidian for UI
 - (Optional) Calendar integration if you use a calendar skill
 
-To have Cursor, Claude, Codex, or VS Code discover skills automatically, run: `./scripts/setup-skill-clients.sh`. Re-run after adding a new skill under `skills/`.
+To have Cursor, Claude, Codex, VS Code, or openCode discover skills automatically, run: `./scripts/setup-skill-clients.sh`. Re-run after adding a new skill under `skills/`.
 
 See [docs/REQUIREMENTS.md](./docs/REQUIREMENTS.md) for details.
 
