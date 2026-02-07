@@ -4,13 +4,13 @@
   <img src="./docs/images/daily-ai.jpeg" alt="DailyAI - The Bridge Between Personal Privacy & Team Productivity" width="800">
 </p>
 
-AI-powered productivity system for team collaboration using [Agent Skills](https://agentskills.io/specification).
+**Self-hosted, local-first, privacy-focused** AI productivity system for team collaboration using [Agent Skills](https://agentskills.io/specification). Your personal data stays on your machine.
 
 ## 🚀 Quick Start
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/AndroidStorm/DailyAI.git
+git clone https://github.com/williamgdev/DailyAI.git
 cd DailyAI
 
 # 2. Run setup (creates your personal workspace and links skills for Cursor, Claude, Codex, VS Code, openCode, etc.)
@@ -19,6 +19,19 @@ cd DailyAI
 # 3. Start using (with your AI CLI or Cursor)
 # e.g. "start my day" or your CLI's equivalent
 ```
+
+<details>
+<summary>What does setup.sh do?</summary>
+
+The setup script is safe and transparent:
+- Creates `personal/` folder with Daily/, ThingsToDo/, ThingsToLearn/ subfolders
+- Copies template files for your personal workspace
+- Optionally links skills to your AI clients (Cursor, Claude, Codex, VS Code)
+- **Never** modifies system files or installs dependencies
+- **Never** sends data anywhere - everything stays local
+
+You can audit the script at `scripts/setup.sh` before running.
+</details>
 
 ---
 

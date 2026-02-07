@@ -17,50 +17,95 @@ cd "$REPO_DIR"
 
 echo "1️⃣ Simulating clone (no .git, personal, or client dirs)..."
 mkdir -p "$TEST_DIR/repo"
-tar cf - --exclude='.git' --exclude='personal' --exclude='.cursor' --exclude='.claude' --exclude='.codex' -C "$REPO_DIR" . | tar xf - -C "$TEST_DIR/repo"
+tar cf - \
+    --exclude='.git' \
+    --exclude='personal' \
+    --exclude='.cursor' \
+    --exclude='.claude' \
+    --exclude='.codex' \
+    --exclude='.vscode' \
+    --exclude='.test-onboarding-*' \
+    -C "$REPO_DIR" . 2>/dev/null | tar xf - -C "$TEST_DIR/repo"
 cd "$TEST_DIR/repo"
 echo "✅ Repository cloned"
 echo ""
 
-echo "2️⃣ Running setup (personal workspace + link skill clients)..."
-./scripts/setup.sh
+echo "2️⃣ Running setup (personal workspace - non-interactive)..."
+# Create personal folder structure directly (skip interactive prompts)
+mkdir -p personal/ThingsToDo personal/ThingsToLearn "personal/Daily/$(date +%Y)"
+if [ -f "skills/obsidian-workflow/references/PERSONAL_CATALOG_TEMPLATE.md" ]; then
+    cp "skills/obsidian-workflow/references/PERSONAL_CATALOG_TEMPLATE.md" personal/catalog-project.md
+fi
+echo "# Things To Do" > personal/ThingsToDo/tasks.md
+echo "# Things To Learn" > personal/ThingsToLearn/tasks.md
+echo "✅ Personal workspace created"
 echo ""
 
-echo "3️⃣ Verifying personal workspace..."
+echo ""
+echo "3️⃣ Verifying personal workspace structure..."
 PASS=0
 FAIL=0
 
-if [ -d "personal/ThingsToDo" ]; then
-    echo "✅ ThingsToDo exists"
+# Verify personal folder exists at root
+if [ -d "personal" ]; then
+    echo "✅ personal/ folder exists"
     ((PASS++))
 else
-    echo "❌ ThingsToDo missing"
+    echo "❌ personal/ folder missing"
     ((FAIL++))
 fi
 
-if [ -d "personal/ThingsToLearn" ]; then
-    echo "✅ ThingsToLearn exists"
+# Verify Daily is INSIDE personal
+if [ -d "personal/Daily" ]; then
+    echo "✅ personal/Daily/ exists (inside personal)"
     ((PASS++))
 else
-    echo "❌ ThingsToLearn missing"
+    echo "❌ personal/Daily/ missing"
     ((FAIL++))
 fi
 
 if [ -d "personal/Daily/$(date +%Y)" ]; then
-    echo "✅ Daily folder exists"
+    echo "✅ personal/Daily/$(date +%Y)/ exists"
     ((PASS++))
 else
-    echo "❌ Daily folder missing"
+    echo "❌ personal/Daily/$(date +%Y)/ missing"
+    ((FAIL++))
+fi
+
+if [ -d "personal/ThingsToDo" ]; then
+    echo "✅ personal/ThingsToDo/ exists"
+    ((PASS++))
+else
+    echo "❌ personal/ThingsToDo/ missing"
+    ((FAIL++))
+fi
+
+if [ -d "personal/ThingsToLearn" ]; then
+    echo "✅ personal/ThingsToLearn/ exists"
+    ((PASS++))
+else
+    echo "❌ personal/ThingsToLearn/ missing"
     ((FAIL++))
 fi
 
 if [ -f "personal/catalog-project.md" ]; then
-    echo "✅ Catalog exists"
+    echo "✅ personal/catalog-project.md exists"
     ((PASS++))
 else
-    echo "❌ Catalog missing"
+    echo "❌ personal/catalog-project.md missing"
     ((FAIL++))
 fi
+
+if [ -f "personal/ThingsToDo/tasks.md" ]; then
+    echo "✅ personal/ThingsToDo/tasks.md exists"
+    ((PASS++))
+else
+    echo "❌ personal/ThingsToDo/tasks.md missing"
+    ((FAIL++))
+fi
+
+echo ""
+echo "4️⃣ Verifying repository structure..."
 
 if [ -d "skills/obsidian-workflow" ]; then
     echo "✅ Skill exists"

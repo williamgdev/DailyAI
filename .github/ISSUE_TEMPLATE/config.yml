@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentation
+    url: https://github.com/williamgdev/DailyAI/blob/main/docs/ONBOARDING.md
+    about: Check the onboarding guide before opening an issue
+  - name: Skills Specification
+    url: https://agentskills.io/specification
+    about: Learn about the Agent Skills specification

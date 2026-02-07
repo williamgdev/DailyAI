@@ -158,6 +158,21 @@ git push origin main
 
 ---
 
+## 🏷️ Good First Issues
+
+New to the project? Look for issues labeled **"good first issue"** in the GitHub Issues tab. These are:
+- Small, well-defined tasks
+- Good for learning the codebase
+- Typically documentation or minor fixes
+
+**Examples of good first issues:**
+- Fix typos in documentation
+- Add missing examples to README
+- Improve error messages in scripts
+- Add tests for existing functionality
+
+---
+
 ## 🐛 Reporting Issues
 
 ### Bug Reports

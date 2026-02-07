@@ -114,11 +114,12 @@ personal/[ProjectName]/
 
 | Path | Contents |
 |------|----------|
-| `personal/System/AGENT.md` | System workflows |
-| `personal/System/catalog-project.md` | Project registry |
+| `personal/catalog-project.md` | Project registry |
 | `personal/Daily/YYYY/` | Daily notes |
+| `personal/ThingsToDo/` | Inbox tasks |
+| `personal/ThingsToLearn/` | Learning tracker |
 | `personal/[ProjectName]/` | Your projects (created via "create project") |
-| `obsidian-templates/` | Source templates |
+| `skills/` | Agent skills source |
 
 ## 🚨 Troubleshooting
 

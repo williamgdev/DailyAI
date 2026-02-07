@@ -16,7 +16,7 @@ After cloning the repo and running setup:
 
 | Skill | Description | Sample Prompts | Author |
 |-------|-------------|----------------|--------|
-| [obsidian-workflow](./obsidian-workflow/) | Daily notes, task management, project workflows, and set up skill clients | "start my day", "digest my day", "work on a project", "create project [Name]", "set up skill clients" | AndroidStorm |
+| [obsidian-workflow](./obsidian-workflow/) | Daily notes, task management, project workflows, and set up skill clients | "start my day", "digest my day", "work on a project", "create project [Name]", "set up skill clients" | williamgdev |
 
 ## ➕ How to Add a New Skill
 

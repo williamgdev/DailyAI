@@ -9,7 +9,7 @@ allowed-tools:
   - Grep
   - Glob
 metadata:
-  author: AndroidStorm
+  author: williamgdev
   version: 2.0
   vault-path: ./personal
 sample-prompts:
