@@ -23,21 +23,21 @@ fi
 
 # Create folder structure
 echo "📁 Creating personal folder structure..."
-mkdir -p "$PERSONAL_DIR/ThingsToDo"
-mkdir -p "$PERSONAL_DIR/ThingsToLearn"
 mkdir -p "$PERSONAL_DIR/Daily/$(date +%Y)"
+mkdir -p "$PERSONAL_DIR/Projects/ThingsToDo"
+mkdir -p "$PERSONAL_DIR/Projects/ThingsToLearn"
 
 # Copy personal-only catalog template (no team/example projects)
 echo "📋 Creating personal project catalog..."
 PERSONAL_CATALOG_TEMPLATE="$REPO_DIR/skills/obsidian-workflow/references/PERSONAL_CATALOG_TEMPLATE.md"
 if [ -f "$PERSONAL_CATALOG_TEMPLATE" ]; then
-  cp "$PERSONAL_CATALOG_TEMPLATE" "$PERSONAL_DIR/catalog-project.md"
+  cp "$PERSONAL_CATALOG_TEMPLATE" "$PERSONAL_DIR/Projects/catalog-project.md"
 else
-  cp "$REPO_DIR/skills/obsidian-workflow/references/PROJECT_CATALOG.md" "$PERSONAL_DIR/catalog-project.md"
+  cp "$REPO_DIR/skills/obsidian-workflow/references/PROJECT_CATALOG.md" "$PERSONAL_DIR/Projects/catalog-project.md"
 fi
 
 # Create empty tasks files for default projects
-cat > "$PERSONAL_DIR/ThingsToDo/tasks.md" << 'EOF'
+cat > "$PERSONAL_DIR/Projects/ThingsToDo/tasks.md" << 'EOF'
 # Tasks — Things To Do
 
 Your personal task inbox.
@@ -50,7 +50,7 @@ Your personal task inbox.
 (Completed tasks will be filed here)
 EOF
 
-cat > "$PERSONAL_DIR/ThingsToLearn/tasks.md" << 'EOF'
+cat > "$PERSONAL_DIR/Projects/ThingsToLearn/tasks.md" << 'EOF'
 # Tasks — Things To Learn
 
 Learning topics and resources.
@@ -67,10 +67,11 @@ echo "✅ Personal workspace ready!"
 echo ""
 echo "📂 Structure created:"
 echo "  personal/"
-echo "  ├── catalog-project.md"
-echo "  ├── ThingsToDo/"
-echo "  ├── ThingsToLearn/"
-echo "  └── Daily/$(date +%Y)/"
+echo "  ├── Daily/$(date +%Y)/"
+echo "  └── Projects/"
+echo "      ├── catalog-project.md"
+echo "      ├── ThingsToDo/"
+echo "      └── ThingsToLearn/"
 echo ""
 
 # Interactive skill and client linking: choose which skills and which clients

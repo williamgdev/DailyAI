@@ -76,7 +76,7 @@
 ## 📁 Project Structure
 
 ```
-personal/[ProjectName]/
+personal/Projects/[ProjectName]/
 ├── AGENT.md           # AI instructions
 ├── project.md         # Overview
 ├── tasks.md           # Task list
@@ -114,11 +114,11 @@ personal/[ProjectName]/
 
 | Path | Contents |
 |------|----------|
-| `personal/catalog-project.md` | Project registry |
+| `personal/Projects/catalog-project.md` | Project registry |
 | `personal/Daily/YYYY/` | Daily notes |
-| `personal/ThingsToDo/` | Inbox tasks |
-| `personal/ThingsToLearn/` | Learning tracker |
-| `personal/[ProjectName]/` | Your projects (created via "create project") |
+| `personal/Projects/ThingsToDo/` | Inbox tasks |
+| `personal/Projects/ThingsToLearn/` | Learning tracker |
+| `personal/Projects/[ProjectName]/` | Your projects (created via "create project") |
 | `skills/` | Agent skills source |
 
 ## 🚨 Troubleshooting

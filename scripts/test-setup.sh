@@ -32,12 +32,13 @@ echo ""
 
 echo "2️⃣ Running setup (personal workspace - non-interactive)..."
 # Create personal folder structure directly (skip interactive prompts)
-mkdir -p personal/ThingsToDo personal/ThingsToLearn "personal/Daily/$(date +%Y)"
+mkdir -p "personal/Daily/$(date +%Y)"
+mkdir -p personal/Projects/ThingsToDo personal/Projects/ThingsToLearn
 if [ -f "skills/obsidian-workflow/references/PERSONAL_CATALOG_TEMPLATE.md" ]; then
-    cp "skills/obsidian-workflow/references/PERSONAL_CATALOG_TEMPLATE.md" personal/catalog-project.md
+    cp "skills/obsidian-workflow/references/PERSONAL_CATALOG_TEMPLATE.md" personal/Projects/catalog-project.md
 fi
-echo "# Things To Do" > personal/ThingsToDo/tasks.md
-echo "# Things To Learn" > personal/ThingsToLearn/tasks.md
+echo "# Things To Do" > personal/Projects/ThingsToDo/tasks.md
+echo "# Things To Learn" > personal/Projects/ThingsToLearn/tasks.md
 echo "✅ Personal workspace created"
 echo ""
 
@@ -72,35 +73,44 @@ else
     ((FAIL++))
 fi
 
-if [ -d "personal/ThingsToDo" ]; then
-    echo "✅ personal/ThingsToDo/ exists"
+# Verify Projects folder is INSIDE personal
+if [ -d "personal/Projects" ]; then
+    echo "✅ personal/Projects/ exists (inside personal)"
     ((PASS++))
 else
-    echo "❌ personal/ThingsToDo/ missing"
+    echo "❌ personal/Projects/ missing"
     ((FAIL++))
 fi
 
-if [ -d "personal/ThingsToLearn" ]; then
-    echo "✅ personal/ThingsToLearn/ exists"
+if [ -d "personal/Projects/ThingsToDo" ]; then
+    echo "✅ personal/Projects/ThingsToDo/ exists"
     ((PASS++))
 else
-    echo "❌ personal/ThingsToLearn/ missing"
+    echo "❌ personal/Projects/ThingsToDo/ missing"
     ((FAIL++))
 fi
 
-if [ -f "personal/catalog-project.md" ]; then
-    echo "✅ personal/catalog-project.md exists"
+if [ -d "personal/Projects/ThingsToLearn" ]; then
+    echo "✅ personal/Projects/ThingsToLearn/ exists"
     ((PASS++))
 else
-    echo "❌ personal/catalog-project.md missing"
+    echo "❌ personal/Projects/ThingsToLearn/ missing"
     ((FAIL++))
 fi
 
-if [ -f "personal/ThingsToDo/tasks.md" ]; then
-    echo "✅ personal/ThingsToDo/tasks.md exists"
+if [ -f "personal/Projects/catalog-project.md" ]; then
+    echo "✅ personal/Projects/catalog-project.md exists"
     ((PASS++))
 else
-    echo "❌ personal/ThingsToDo/tasks.md missing"
+    echo "❌ personal/Projects/catalog-project.md missing"
+    ((FAIL++))
+fi
+
+if [ -f "personal/Projects/ThingsToDo/tasks.md" ]; then
+    echo "✅ personal/Projects/ThingsToDo/tasks.md exists"
+    ((PASS++))
+else
+    echo "❌ personal/Projects/ThingsToDo/tasks.md missing"
     ((FAIL++))
 fi
 

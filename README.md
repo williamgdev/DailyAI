@@ -24,7 +24,8 @@ cd DailyAI
 <summary>What does setup.sh do?</summary>
 
 The setup script is safe and transparent:
-- Creates `personal/` folder with Daily/, ThingsToDo/, ThingsToLearn/ subfolders
+- Creates `personal/` folder with `Daily/` and `Projects/` subfolders
+- Creates `personal/Projects/ThingsToDo/` and `personal/Projects/ThingsToLearn/`
 - Copies template files for your personal workspace
 - Optionally links skills to your AI clients (Cursor, Claude, Codex, VS Code)
 - **Never** modifies system files or installs dependencies
@@ -154,7 +155,8 @@ See [docs/REQUIREMENTS.md](./docs/REQUIREMENTS.md) for details.
 ### Personal workspace
 
 **personal/** — used by "start my day" and "create project":
-- ThingsToDo (your inbox), ThingsToLearn (learning tracker), your projects as `personal/[ProjectName]/`
+- `personal/Daily/` for daily notes
+- `personal/Projects/` for your projects: ThingsToDo (inbox), ThingsToLearn (learning tracker), and projects you create
 - The **personal** folder is gitignored and **never pushed** to the repository; only you have it.
 
 ---

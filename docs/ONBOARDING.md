@@ -28,7 +28,7 @@ This repo has two distinct areas:
 After setup, your repo will look like this:
 
 ```
-wcp-profile-ai-colaboration/
+DailyAI/
 ├── Projects/                # Team projects and agents (shared, version controlled)
 │   ├── PR Reviews/
 │   ├── Calendar Integration/
@@ -37,11 +37,13 @@ wcp-profile-ai-colaboration/
 ├── scripts/
 ├── docs/
 └── personal/                # Your workspace only — never pushed to the repo
-    ├── catalog-project.md
-    ├── ThingsToDo/
-    ├── ThingsToLearn/
-    ├── Daily/
-    └── [Your projects from "create project"]
+    ├── Daily/               # Your daily notes
+    │   └── YYYY/
+    └── Projects/            # Your personal projects
+        ├── catalog-project.md   # Your personal project registry
+        ├── ThingsToDo/
+        ├── ThingsToLearn/
+        └── [Your projects from "create project"]
 ```
 
 ---
@@ -65,10 +67,10 @@ This creates your **personal** workspace:
 
 The script will create:
 - `personal/` folder (gitignored — your private workspace)
-- `personal/ThingsToDo/` (your inbox)
-- `personal/ThingsToLearn/` (learning tracker)
 - `personal/Daily/2026/` (daily notes)
-- `personal/catalog-project.md` (your **personal** project registry only; team projects are in `Projects/catalog-team.md`)
+- `personal/Projects/ThingsToDo/` (your inbox)
+- `personal/Projects/ThingsToLearn/` (learning tracker)
+- `personal/Projects/catalog-project.md` (your **personal** project registry only; team projects are in `Projects/catalog-team.md`)
 
 To link skills for Cursor, Claude, Codex, VS Code, or openCode, run: `./scripts/setup-skill-clients.sh` (or say "set up skill clients" when using the obsidian-workflow skill). Re-run after adding a new skill under `skills/`.
 
