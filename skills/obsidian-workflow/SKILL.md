@@ -103,7 +103,7 @@ This is an **interactive, conversational workflow** where the AI agent guides yo
 2. If symlinks are not supported (e.g. some Windows setups), run with `--copy`: `./scripts/setup-skill-clients.sh --copy`
 3. Report what was linked (or any skip messages).
 
-**What it does**: Links each skill under `skills/` (that has a `SKILL.md`) into the project's `.cursor/skills/`, `.claude/skills/`, `.codex/skills/`, and `.vscode/skills/` so Cursor, Claude, Codex, and VS Code auto-discover them. All paths stay inside the project. Idempotent; safe to re-run.
+**What it does**: Links each skill under `skills/` (that has a `SKILL.md`) into the project's `.cursor/skills/`, `.claude/skills/`, `.codex/skills/`, `.vscode/skills/`, and `.opencode/skills/` so Cursor, Claude, Codex, VS Code, and openCode auto-discover them. All paths stay inside the project. Idempotent; safe to re-run.
 
 **Phase 1: Show All Projects**
 1. Read `personal/catalog-project.md` to get all projects

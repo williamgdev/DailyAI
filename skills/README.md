@@ -79,7 +79,7 @@ git push
 ```
 
 **That's it!** The skill is now available to anyone who pulls the repo.  
-To have Cursor, Claude, Codex, or VS Code discover it: run `./scripts/setup-skill-clients.sh` from the repo root. That script **scans the entire `skills/` folder** and links every `skills/<name>/` that has a `SKILL.md`—no need to register your skill anywhere else.
+To have Cursor, Claude, Codex, VS Code, or openCode discover it: run `./scripts/setup-skill-clients.sh` from the repo root. That script **scans the entire `skills/` folder** and links every `skills/<name>/` that has a `SKILL.md`—no need to register your skill anywhere else.
 
 ---
 

@@ -48,7 +48,7 @@ When running AI from the CLI (Cursor, Claude Code, OpenAI CLI, Gemini CLI, etc.)
 
 - **Needed for:** Running skills from the terminal (e.g. “start my day”, “work on a project”). Any CLI that can run agent skills works.
 - **Examples:** Claude Code, OpenAI CLI, Gemini CLI, or your organization’s AI assistant CLI. Install and configure per that tool’s docs.
-- **If you don’t use a terminal CLI:** You can run the same workflows from **Cursor** or other IDEs by opening this repo; skills are linked into `.cursor/skills/`, `.claude/skills/`, etc. by setup.
+- **If you don't use a terminal CLI:** You can run the same workflows from **Cursor** or other IDEs (including openCode) by opening this repo; skills are linked into `.cursor/skills/`, `.claude/skills/`, `.vscode/skills/`, `.opencode/skills/`, etc. by setup.
 
 ### Calendar integration (optional)
 
